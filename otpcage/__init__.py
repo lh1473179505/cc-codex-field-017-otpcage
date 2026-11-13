@@ -1,3 +1,3 @@
-"""otpcage: fail-closed TOTP check with a replay ledger (verify is not implemented yet)."""
+"""otpcage: fail-closed TOTP check with a persistent replay ledger."""
 
 __version__ = "0.1.0"

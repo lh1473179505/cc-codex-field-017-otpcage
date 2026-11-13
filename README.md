@@ -1,6 +1,6 @@
 # otpcage
 
-A small fail-closed TOTP checker with a replay ledger. Account and ledger loading already work. `inspect` can print an account id and the Base32 secret. `verify` is still a stub in this snapshot.
+A small fail-closed TOTP checker with a replay ledger. Account and ledger loading already work. `inspect` prints an account id and the Base32 secret, and `verify` checks a TOTP code against the configured window while rejecting replayed `(account_id, timestep)` pairs.
 
 The current second-factor path only compared the current 30-second window and would accept the same digits twice. This tool must reject a reused `(account_id, timestep)` pair and still accept a code from the adjacent step inside the configured window.
 
